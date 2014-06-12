@@ -1,0 +1,135 @@
+<html>
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+  <link rel="stylesheet" href="themes/my-custom-theme.min.css" />
+  <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+  <script src="//cdn.firebase.com/v0/firebase.js"></script>
+
+	<script>
+	fb = new Firebase("https://classmatch.firebaseio.com");
+
+	function child_created() {
+	 var usersname = $("#usersname").val();
+	 var classp1 = $("#classp1").val();
+	 var teacherp1 = $('#teacherp1').val();
+   var classp2 = $('#classp2').val();
+   var teacherp2 = $('#teacherp2').val();
+   var classp3 = $('#classp3').val();
+   var teacherp3 = $('#teacherp3').val();
+   var classp4 = $('#classp4').val();
+   var teacherp4 = $('#teacherp4').val();
+   var classp6 = $('#classp6').val();
+   var teacherp6 = $('#teacherp6').val();
+   var classp7 = $('#classp7').val();
+   var teacherp7 = $('#teacherp7').val();
+	 
+		if( usersname.length > 0) {
+			console.log("it works");
+           // fb.child('users').child(usersname).set(usersname);
+           // fb.child('users').child(usersname).child('classp1').set(classp1);  
+           // fb.child('users').child(usersname).child('teacherp1').set(teacherp1); 
+           // fb.child('users').child(usersname).child('classp2').set(classp2);
+           // fb.child('users').child(usersname).child('teacherp2').set(teacherp2);
+           // fb.child('users').child(usersname).child('classp3').set(classp3);
+            fb.child('users').child(usersname).child('classp7').child(classp7).child('teacherp7').set(teacherp7); 
+            fb.child('users').child(usersname).child('classp6').child(classp6).child('teacherp6').set(teacherp6); 
+            fb.child('users').child(usersname).child('classp4').child(classp4).child('teacherp4').set(teacherp4); 
+            fb.child('users').child(usersname).child('classp3').child(classp3).child('teacherp3').set(teacherp3);
+            fb.child('users').child(usersname).child('classp2').child(classp2).child('teacherp2').set(teacherp2); 
+            fb.child('users').child(usersname).child('classp1').child(classp1).child('teacherp1').set(teacherp1); 
+            fb.child('classp1').child(classp1).child('teacherp1').child(teacherp1).child('students').child(usersname).set(usersname); 
+            fb.child('classp2').child(classp2).child('teacherp2').child(teacherp2).child('students').child(usersname).set(usersname); 
+            fb.child('classp3').child(classp3).child('teacherp3').child(teacherp3).child('students').child(usersname).set(usersname); 
+            fb.child('classp4').child(classp4).child('teacherp4').child(teacherp4).child('students').child(usersname).set(usersname); 
+            fb.child('classp6').child(classp6).child('teacherp6').child(teacherp6).child('students').child(usersname).set(usersname); 
+            fb.child('classp7').child(classp7).child('teacherp7').child(teacherp7).child('students').child(usersname).set(usersname);       
+            }
+		}
+
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+			
+ <br>
+  		Please Enter Your Full Name:
+  		<input type="text" id="usersname">
+  		<!-- <button onclick="child_created()">Submit</button> -->
+      <br>
+Put only teachers last name!</br>
+
+<br>
+  		Enter Class for Period 1:
+  		<input type="text" id="classp1">
+  		<!-- <button onclick="child_created">Submit</button> -->
+ 
+  		Enter Teacher for Period 1:
+  		<input type="text" id="teacherp1">
+  		<!-- <button onclick="child_created">Submit</button> -->
+  	</br>
+
+
+    <br>
+  		Enter Class for Period 2:
+  		<input type="text" id="classp2">
+  		<!-- <button onclick="child_created()">Submit</button> -->
+  		Enter Teacher for Period 2:
+      <input type="text" id="teacherp2">
+      <!-- <button onclick="child_created">Submit</button> -->
+
+
+    </br>
+<br>
+
+  		Enter Class for Period 3:
+  		<input type="text" id="classp3">
+  		<!-- <button onclick="child_created()">Submit</button> -->
+  		Enter Teacher for Period 3:
+      <input type="text" id="teacherp3">
+      <!-- <button onclick="child_created">Submit</button> --> 
+
+
+</br>
+<br>
+		Enter Class for Period 4:
+		<input type="text" id="classp4">
+  		<!-- <button onclick="child_created()">Submit</button> -->
+  	Enter Teacher for Period 4:
+      <input type="text" id="teacherp4">
+      <!-- <button onclick="child_created()">Submit</button> -->
+</br>
+<br>
+		Enter Class for Period 6:
+		<input type="text" id="classp6">
+  		<!-- <button onclick="child_created()">Submit</button> -->
+  	Enter Teacher for Period 6:
+      <input type="text" id="teacherp6">
+      <!-- <button onclick="child_created()">Submit</button> -->
+
+</br>
+<br>
+		Enter Class for Period 7:
+		<input type="text" id="classp7">
+  		<!-- <button onclick="child_created()">Submit</button> -->
+		Enter Teacher for Period 7:
+  	 <input type="text" id="teacherp7">	
+     <!-- <button onclick="child_created()">Submit</button> -->
+</br>
+<br>
+     Ready : 
+     <button onclick="child_created()">Submit</button>
+</br>
+
+</body>
+</html>

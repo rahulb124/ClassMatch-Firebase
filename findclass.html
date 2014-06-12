@@ -1,0 +1,52 @@
+<html>
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+  <link rel="stylesheet" href="themes/my-custom-theme.min.css" />
+  <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+  <script src="//cdn.firebase.com/v0/firebase.js"></script>
+
+	<script>
+	fb = new Firebase("https://classmatch.firebaseio.com");
+
+
+   function findstudents() {
+    var findclass = $("#findclass").val();
+    var findteacher = $("#findteacher").val();
+
+    if(findclass.length && findteacher.length > 0){
+      fb.child('classp1').child(findclass).child('teacherp1').once('value', function(snapshot){
+        console.log(snapshot.val());
+      var students = fb.child('classp1').child(findclass).child('teacherp1').child(findteacher).child('users').name(); 
+        // console.log(snapshot.val(fb.child('classp1').child(findclass).child('teacherp1').child(findteacher).child('users')));
+        $('#classmembers').html(snapshot.val());
+      console.log(students.val);
+      });
+      
+    }
+  }
+
+  
+   
+
+
+	</script>
+</head>
+<body>
+			
+      <input type="text" id="findclass">
+      <input type="text" id="findteacher">
+      <div id="classmembers"></div>
+      <button onclick="findstudents()">Find Classmates</button>
+
+      <div id="classmembers"></div>
+    
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html> 
+<head> <title>Class Match </title> 
+<!-- SCRIPTS -->
+<script type='text/javascript' src='https://cdn.firebase.com/js/simple-login/1.5.0/firebase-simple-login.js'></script>
+<script>
+var chatRef = new Firebase('https://<YOUR-FIREBASE>.firebaseio.com');
+var auth = new FirebaseSimpleLogin(chatRef, function(error, user) {
+  if (error) {
+    // an error occurred while attempting login
+    console.log(error);
+  } else if (user) {
+    // user authenticated with Firebase
+    console.log('User ID: ' + user.uid + ', Provider: ' + user.provider);
+  } else {
+    // user is logged out
+  }
+});
+
+
+// create account
+auth.createUser(email, password, function(error, user) {
+  if (!error) {
+    console.log('User Id: ' + user.uid + ', Email: ' + user.email);
+  }
+});
+
+// login 
+
+auth.login('password', {
+  email: '<email@domain.com>',
+  password: '<password>'
+  rememberMe: true
+});
+
+</script>
+
+
+</head> 
+
+<body>
+<h1> Class Match </h1>
+Welcome to Class Match, where you are able to find other people in your class. 
+</body> 
+</html>
