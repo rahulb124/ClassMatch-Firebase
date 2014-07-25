@@ -1,9 +1,21 @@
 <html>
 <head>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
-	<!-- Optional theme -->
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<script language=" JavaScript" >
+<!-- 
+function LoadOnce() 
+{ 
+window.location.reload(); 
+} 
+//-->
+</script>
+
+  <!-- Optional theme -->
   <link rel="stylesheet" href="themes/my-custom-theme.min.css" />
   <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
   <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
@@ -11,42 +23,235 @@
   <script src="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
   <script src="//cdn.firebase.com/v0/firebase.js"></script>
 
-	<script>
-	fb = new Firebase("https://classmatch.firebaseio.com");
+  <script>
+  window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}
+  fb = new Firebase("https://classmatch.firebaseio.com");
 
 
-   function findstudents() {
-    var findclass = $("#findclass").val();
-    var findteacher = $("#findteacher").val();
+   function findstudentsp1() {
+    var findclassp1 = $("#findclassp1").val();
+    var findteacherp1 = $("#findteacherp1").val();
 
-    if(findclass.length && findteacher.length > 0){
-      fb.child('classp1').child(findclass).child('teacherp1').once('value', function(snapshot){
+    if(findclassp1.length && findteacherp1.length > 0){
+
+      fb.child('classp1').child(findclassp1).child('teacherp1').child(findteacherp1).child('users').on('value', function(snapshot) {
         console.log(snapshot.val());
-      var students = fb.child('classp1').child(findclass).child('teacherp1').child(findteacher).child('users').name(); 
-        // console.log(snapshot.val(fb.child('classp1').child(findclass).child('teacherp1').child(findteacher).child('users')));
-        $('#classmembers').html(snapshot.val());
-      console.log(students.val);
+        var students = snapshot.val();
+        snapshot.forEach(function(childSnapshot) {
+        var name = childSnapshot.name();
+        var childData = childSnapshot.val();
+        console.log(childSnapshot.val());
+        $('#classmembersp1').html($('#classmembersp1').html() +" " + childSnapshot.val());
+        
+        // alert('The following students are in ' + findclass + ' with ' + findteacher + ' during 1st period : ' + childSnapshot.val() );
+      })
+
+  });
+        
+
+}
+  }
+  function findstudentsp2() {
+    var findclassp2 = $("#findclassp2").val();
+    var findteacherp2 = $("#findteacherp2").val();
+
+    if(findclassp2.length && findteacherp2.length > 0){
+
+      fb.child('classp2').child(findclassp2).child('teacherp2').child(findteacherp2).child('users').on('value', function(snapshot) {
+        console.log(snapshot.val());
+        var students = snapshot.val();
+        snapshot.forEach(function(childSnapshot) {
+        var name = childSnapshot.name();
+        var childData = childSnapshot.val();
+        console.log(childSnapshot.val());
+        $('#classmembersp2').html($('#classmembersp2').html() +" " + childSnapshot.val());
+        
+        // alert('The following students are in ' + findclass + ' with ' + findteacher + ' during 1st period : ' + childSnapshot.val() );
+      })
+
+  
+  });
+      
+
+    }
+  }function findstudentsp3() {
+    var findclassp3 = $("#findclassp3").val();
+    var findteacherp3 = $("#findteacherp3").val();
+
+    if(findclassp3.length && findteacherp3.length > 0){
+
+      fb.child('classp3').child(findclassp3).child('teacherp3').child(findteacherp3).child('users').on('value', function(snapshot) {
+        console.log(snapshot.val());
+        var students = snapshot.val();
+        snapshot.forEach(function(childSnapshot) {
+        var name = childSnapshot.name();
+        var childData = childSnapshot.val();
+        console.log(childSnapshot.val());
+        $('#classmembersp3').html($('#classmembersp3').html() +" " + childSnapshot.val());
+        
+        // alert('The following students are in ' + findclass + ' with ' + findteacher + ' during 1st period : ' + childSnapshot.val() );
+      })
+
+  });
+    }
+  }function findstudentsp4() {
+    
+    var findclassp4 = $("#findclassp4").val();
+    var findteacherp4 = $("#findteacherp4").val();
+
+    if(findclassp4.length && findteacherp4.length > 0){
+
+      fb.child('classp4').child(findclassp4).child('teacherp4').child(findteacherp4).child('users').on('value', function(snapshot) {
+        console.log(snapshot.val());
+        var students = snapshot.val();
+        snapshot.forEach(function(childSnapshot) {
+        var name = childSnapshot.name();
+        var childData = childSnapshot.val();
+        console.log(childSnapshot.val());
+        $('#classmembersp4').html($('#classmembersp4').html() +" " + childSnapshot.val());
+        
+        // alert('The following students are in ' + findclass + ' with ' + findteacher + ' during 1st period : ' + childSnapshot.val() );
+      })
+
+  });
+      
+  }
+  }
+  function findstudentsp6() {
+    var findclassp6 = $("#findclassp6").val();
+    var findteacherp6 = $("#findteacherp6").val();
+
+    if(findclassp6.length && findteacherp6.length > 0){
+
+      fb.child('classp6').child(findclassp6).child('teacherp6').child(findteacherp6).child('users').on('value', function(snapshot) {
+        console.log(snapshot.val());
+        var students = snapshot.val();
+        snapshot.forEach(function(childSnapshot) {
+        var name = childSnapshot.name();
+        var childData = childSnapshot.val();
+        console.log(childSnapshot.val());
+        $('#classmembersp6').html($('#classmembersp6').html() +" " + childSnapshot.val());
+        
+        // alert('The following students are in ' + findclass + ' with ' + findteacher + ' during 1st period : ' + childSnapshot.val() );
+      })
+
+  });
+     
+  }
+}
+  function findstudentsp7() {
+    var findclassp7 = $("#findclassp7").val();
+    var findteacherp7 = $("#findteacherp7").val();
+
+    if( findclassp7.length && findteacherp7.length > 0){
+
+      fb.child('classp7').child(findclassp7).child('teacherp7').child(findteacherp7).child('users').on('value', function(snapshot) {
+        console.log(snapshot.val());
+        var students = snapshot.val();
+        snapshot.forEach(function(childSnapshot) {
+        var name = childSnapshot.name();
+        var childData = childSnapshot.val();
+        console.log(childSnapshot.val());
+        $('#classmembersp7').html($('#classmembersp7').html() +" " + childSnapshot.val());
+        
+        // alert('The following students are in ' + findclass + ' with ' + findteacher + ' during 1st period : ' + childSnapshot.val() );
+      })
+
+  });
+  
+  }
+}
+ //fb.child('classp1').child(findclass).child('teacherp1').once('value', function(snapshot){
+      // console.log(snapshot.val());
+
+      //console.log(snapshot.val());
+
+      /*$('#classmembers').html(snapshot.val());
+      var students = fb.child('classp1').child(findclass).child('teacherp1').child(findteacher).child('users').name; 
+      console.log(students);
       });
       
     }
   }
-
+*/ 
   
    
 
 
-	</script>
+  </script>
 </head>
 <body>
-			
-      <input type="text" id="findclass">
-      <input type="text" id="findteacher">
-      <div id="classmembers"></div>
-      <button onclick="findstudents()">Find Classmates</button>
 
-      <div id="classmembers"></div>
-    
 
+<div class="row">
+
+  <div class="col-md-4">
+  Period 1:   
+      <input type="text" id="findclassp1" placeholder="Enter Class Name">
+      <input type="text" id="findteacherp1" placeholder="Enter Teacher's Name">
+      <div id="classmembersp1"></div>
+      <button onclick="findstudentsp1()">Find Classmates</button>
+  </div>
+
+
+  <div class="col-md-4">Period 2:
+       <input type="text" id="findclassp2" placeholder="Enter Class Name">
+      <input type="text" id="findteacherp2" placeholder="Enter Teacher's Name">
+      <div id="classmembersp2"></div>
+      <button onclick="findstudentsp2()">Find Classmates</button>
+  </div>
+
+
+  <div class="col-md-4">Period 3:
+       <input type="text" id="findclassp3" placeholder="Enter Class Name">
+      <input type="text" id="findteacherp3" placeholder="Enter Teacher's Name">
+      <div id="classmembersp3"></div>
+      <button onclick="findstudentsp3()">Find Classmates</button>
+  </div>
+
+</div>
+
+
+
+<div class="row">
+  <div class="col-md-4">.Period 4:
+       <input type="text" id="findclassp4" placeholder="Enter Class Name">
+      <input type="text" id="findteacherp4" placeholder="Enter Teacher's Name">
+      <div id="classmembersp4"></div>
+      <button onclick="findstudentsp4()">Find Classmates</button>
+  </div>
+
+  <div class="col-md-4">Period 6:
+       <input type="text" id="findclassp6" placeholder="Enter Class Name">
+      <input type="text" id="findteacherp6" placeholder="Enter Teacher's Name">
+      <div id="classmembersp6"></div>
+      <button onclick="findstudentsp6()">Find Classmates</button>
+  </div>
+
+  <div class="col-md-4"> Period 7:
+       <input type="text" id="findclassp7" placeholder="Enter Class Name">
+      <input type="text" id="findteacherp7" placeholder="Enter Teacher's Name">
+      <div id="classmembersp7"></div>
+      <button onclick="findstudentsp7()">Find Classmates</button>
+  </div>
+  
+</div>
+
+<div class="row">
+  <div class="col-md-6"><a rel="external" href ="https://classmatch.firebaseapp.com/index.html#loaded"><button> Home </button></a> </div>
+  <div class="col-md-6"><a rel="external" href ="https://classmatch.firebaseapp.com/inputclass.html#loaded"><button> Input class </button></a>
+</div>
+
+</div>
+
+<footer>
+        Made by Rahul Bekal.
+</footer>
 
 </body>
 </html>

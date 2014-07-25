@@ -1,44 +1,15 @@
-<html> 
-<head> <title>Class Match </title> 
-<!-- SCRIPTS -->
-<script type='text/javascript' src='https://cdn.firebase.com/js/simple-login/1.5.0/firebase-simple-login.js'></script>
-<script>
-var chatRef = new Firebase('https://<YOUR-FIREBASE>.firebaseio.com');
-var auth = new FirebaseSimpleLogin(chatRef, function(error, user) {
-  if (error) {
-    // an error occurred while attempting login
-    console.log(error);
-  } else if (user) {
-    // user authenticated with Firebase
-    console.log('User ID: ' + user.uid + ', Provider: ' + user.provider);
-  } else {
-    // user is logged out
-  }
-});
-
-
-// create account
-auth.createUser(email, password, function(error, user) {
-  if (!error) {
-    console.log('User Id: ' + user.uid + ', Email: ' + user.email);
-  }
-});
-
-// login 
-
-auth.login('password', {
-  email: '<email@domain.com>',
-  password: '<password>'
-  rememberMe: true
-});
-
-</script>
-
-
-</head> 
-
-<body>
-<h1> Class Match </h1>
-Welcome to Class Match, where you are able to find other people in your class. 
-</body> 
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="1;url=https://classmatch.firebaseapp.com/signup/">
+        <script type="text/javascript">
+            window.location.href = "https://classmatch.firebaseapp.com/signup/"
+        </script>
+        <title>Page Redirection</title>
+    </head>
+    <body>
+        <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
+        If you are not redirected automatically, follow the <a href='https://classmatch.firebaseapp.com/signup/'>link to example</a>
+    </body>
 </html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../img/ico/icon.png">
+
+    <title>ClassMatch</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://classmatch.firebaseapp.com/signup/css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='https://classmatch.firebaseapp.com/signup/css/style.css'/>
+    <link rel='stylesheet' type='text/css' href='/signup/css/bootstrap-select.min.css'/>
+
+    <!-- font css -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+  <script type="text/javascript">
+<!--
+if (screen.width <= 699) {
+document.location = "mobile.html";
+}
+//-->
+</script>
+
+  </head>
+
+  <body>
+
+    <div id="header-div">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="header">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <div id="logoWhiteDiv">
+              <a class="navbar-brand" href="#top"><img src="https://cloud.githubusercontent.com/assets/5303752/3691610/175d0fd4-1354-11e4-94ef-41850587c38f.png" height="35" id="logoWhiteImg"></a>
+            </div>
+          </div>
+
+          <div class="collapse navbar-collapse navbar-right">
+            <ul class="nav navbar-nav">
+              
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+              <!--
+              <li class="top-8">
+                <div class="dropdown" id="loginButtons">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                    
+                    Log in <span class="caret"></span>
+                    
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="username">
+                    
+
+                    <form id="signIn-form" role="form" class="text-center">
+                      <li role="presentation">
+                        <input type="text" name="username" placeholder="Username" class="form-control loginInputs">
+                      </li>
+                      <li role="presentation">
+                        <input type="password" name="password" placeholder="Password" class="form-control loginInputs">
+                      </li>
+                      <li role="presentation">
+                        <button type="button" class="btn btn-success btn-small" onclick="signIn();">Log in</button>
+                      </li>
+                    </form>
+                    <li role='presentation'>
+                      <a href='/forgot'>Forgot your password?</a>
+                    </li>
+
+                    -->
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div id="container" class="container-fluid">
+      
+      <div class="row section-div" id="top">
+     <center> <h1  style="color:#fff"> Sign up to be emailed when ClassMatch is released.</h1></center>
+     <br>
+     <br>
+        <div class="col-xs-6 col-xs-offset-1 text-center color-white">
+          <p style="font-size:68px;">Input Classes.</p>
+          <p style="font-size:68px;">Find Classmates.</p>
+          <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+              <p style="font-size:20px;">Class Match allows for you to find your classmates when students receive their schedules at the beginning of the school year by inputting class schedules into the web app.</p><br>
+            </div>
+          </div>
+        </div>
+        
+       <div class="col-xs-3" style="color:#fff">
+        
+        <form action="//firebaseapp.us8.list-manage.com/subscribe/post?u=5058e94e36e910d8b50ff1f15&amp;id=9af67c6cb3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+  <h2>Be Notified When ClassMatch is released</h2>
+<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+<div class="mc-field-group">
+  <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+</label>
+  <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+<div class="mc-field-group">
+  <label for="mce-FNAME">First Name </label>
+  <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+</div>
+<div class="mc-field-group">
+  <label for="mce-LNAME">Last Name </label>
+  <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+</div>
+<div class="mc-field-group size1of2">
+  <label for="mce-MMERGE3">Phone Number </label>
+    <div class="phonefield phonefield-us">
+        (<span class="phonearea"><input class="phonepart " pattern="[0-9]*" id="mce-MMERGE3-area" name="MMERGE3[area]" maxlength="3" size="3" value="" type="text"></span>)
+        <span class="phonedetail1"><input class="phonepart " pattern="[0-9]*" id="mce-MMERGE3-detail1" name="MMERGE3[detail1]" maxlength="3" size="3" value="" type="text"></span> - 
+        <span class="phonedetail2"><input class="phonepart " pattern="[0-9]*" id="mce-MMERGE3-detail2" name="MMERGE3[detail2]" maxlength="4" size="4" value="" type="text"></span>
+    <span class="small-meta nowrap">(###) ###-####</span>
+    </div>
+</div>  <div id="mce-responses" class="clear">
+    <div class="response" id="mce-error-response" style="display:none"></div>
+    <div class="response" id="mce-success-response" style="display:none"></div>
+  </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_5058e94e36e910d8b50ff1f15_9af67c6cb3" tabindex="-1" value=""></div>
+    <div class="clear"><input class="btn btn-primary" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+</form>
+</div>
+
+</div>
+<!--         <span class="glyphicon glyphicon-chevron-down"></span>
+ -->      
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <div class="row section-div text-center" id="about">
+        <div class="header-break-div">
+        </div>
+        <h2 style="color:#3498db;">What makes us special.</h2>
+        <h4>We remove the hassle and speed up to proccess.</h4>
+
+        <br>
+
+        <div class="col-lg-4">
+          <i class="fa fa-clipboard fa-5x"></i>
+          <h3>Quick Schedule Input</h3>
+          <p>No need to send pictures of schedule individually to friends.</p>
+        </div> 
+
+        <div class="col-lg-4">
+          <i class="fa fa-check-circle-o fa-5x"></i>
+          <h3>Reliable</h3>
+          <p>Works effieciently. Works exactly how you want it to.</p>
+        </div>
+
+        <div class="col-lg-4">
+          <i class="fa fa-home fa-5x"></i>
+          <h3>School & Friends </h3>
+          <p>Share schedules.  Find Classmates.  Don't waste time sharing schedules. Just Search.</p>
+        </div>
+
+
+        <div class="col-lg-12" style="height:15vh;">
+        </div>
+
+        <div class="col-lg-8 col-lg-offset-2">
+          <h3 style="color:#3498db;"><a href="https://www.youtube.com/watch?v=rMuxUchQ-XU">How ClassMatch Works.</a></h3>
+          <div class="row">
+            <div class="col-xs-4">
+              <i class="fa fa-keyboard-o fa-5x"></i>
+              <p>User inputs schedule.</p>
+            </div>
+            <div class="col-xs-4">
+              <i class="fa fa-long-arrow-right fa-5x"></i>
+              <p>Friends input schedules.</p>
+            </div>
+            <div class="col-xs-4">
+              <i class="fa fa-thumbs-o-up fa-5x"></i>
+              <p>Find Class members by searching by Teacher's name and period.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-8 col-lg-offset-2">
+          <h3 style="color:#3498db;">When will ClassMatch be released.</h3>
+          <div class="row">
+            <div class="col-xs-8 col-lg-offset-2">
+              <p>A Week before Students recieve schedules.</p>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+
+
+      <!--
+      <div class="row break-div">
+      </div>
+
+      <div class="row section-div text-center" id="team">
+        <div class="header-break-div">
+        </div>
+        <h2>Our Team</h2>
+
+        <div class="col-lg-12 team-break-div">
+        </div>
+
+        <div class="col-lg-4">
+          <img src="img/people/rohit.jpg" height="180">
+          <br>
+          <h3>Rohit Rastogi</h3>
+          <small>Business Development</small>
+        </div>
+        <div class="col-lg-4">
+          <img src="img/people/jeff.jpg" height="180">
+          <br>
+          <h3>Jeff Chao</h3>
+          <small>Front-end Developer</small>
+        </div>
+        <div class="col-lg-4">
+          <img src="img/people/yasha.jpg" height="180">
+          <br>
+          <h3>Yasha Mostofi</h3>
+          <small>Front-end and Back-end Developer</small>
+        </div>
+
+        <div class="col-lg-12 team-break-div-2">
+        </div>
+
+        <div class="col-lg-3">
+          <img src="img/people/brian.jpg" height="150">
+          <br>
+          <h4>Brian Truong</h4>
+        </div>
+        <div class="col-lg-3">
+          <img src="img/people/nathan.jpg" height="150">
+          <br>
+          <h4>Nathan Lindquist</h4>
+        </div>
+        <div class="col-lg-3">
+          <img src="img/people/jayson.jpg" height="150">
+          <br>
+          <h4>Jayson Shiau</h4>
+        </div>
+        <div class="col-lg-3">
+          <img src="img/people/james.jpg" height="150">
+          <br>
+          <h4>James Zhu</h4>
+        </div>
+      </div>
+
+      <div class="row break-div">
+      </div>
+-->
+      <div class="row section-div text-center color-white" id="contact">
+        <div class="header-break-div">
+        </div>
+        <h3>Send us a message.</h3>
+
+        <form action="mailto:rahulbekal24@gmail.com" enctype="text/plain" method="post" class="form-horizontal" id="contactUs-form" style="width:90vh; margin-left:auto; margin-right:auto;">
+          <div class="form-group">
+            <label class="col-xs-2 control-label">Name</label>
+            <div class="col-xs-9 col-xs-offset-1">
+              <input type="text" id="name" placeholder="Name" name="name" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-xs-2 control-label">Email</label>
+            <div class="col-xs-9 col-xs-offset-1">
+              <input type="email" id="email" placeholder="Email" name="email" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-xs-2 control-label">Message</label>
+            <div class="col-xs-9 col-xs-offset-1">
+              <textarea placeholder="Message" id="message" name="message" class="form-control" height="400"></textarea>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-medium btn-default" value="Submit" name="Submit" >Send</button>
+        </form>
+
+        <div style="height:3vh;"></div>
+
+        <div class="footer-landing">
+          <div class="container text-center">
+            <p>
+              <br>
+              &copy;Copyright Rahul Bekal 2014
+            </p>
+          </div>
+        </div>
+      </div>
+
+      
+
+
+
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://www.classmatch.firebaseapp.com/js/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://classmatch.firebaseapp.com/js/bootstrap.min.js"></script>
+    <script src="https://classmatch.firebaseapp.com/js/bootstrap-select.min.js"></script>
+    
+  </body>
+</html>
