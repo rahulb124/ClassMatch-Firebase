@@ -1,14 +1,6 @@
 <html> 
 <head> <title>Class Match </title> 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="themes/my-custom-theme.min.css" />
-  <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
-  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-  <script src="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+<link rel="stylesheet" href="themes/my-custom-theme.css">
   <script src="//cdn.firebase.com/v0/firebase.js"></script>
 <script>
 window.onload = function() {
@@ -17,29 +9,34 @@ window.onload = function() {
         window.location.reload();
     }
 }
-
-
 </script>
-
-
 </head> 
 
 <body>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
-<h1> Class Match </h1>
-Welcome to Class Match, where you are able to find other people in your class. 
+<div class="container">
 
-
-  <div class="row">
-  <div class="col-md-6"><a rel="external" href ="https://classmatch.firebaseapp.com/inputclass.html#loaded"><button> Input Class </button></a> </div>
-  <div class="col-md-6"><a rel="external" href ="https://classmatch.firebaseapp.com/findclass.html#loaded"><button> Find Class </button></a>
+<div class="navbar-header">
+<a class="navbar-brand" href="#"><h1>Class Match</h1><h3>Rahul Bekal</h3></a>
 </div>
 
-<footer>
-  <br>
-"" Made by Rahul Bekal.
-  <br>
-</footer>
+<div class="collapse navbar-collapse"> 
+<h2 class="text-right">Welcome to Class Match: <br>now you can find others<br> <em>in your class.</em></h2>
+</div>
 
+</div>
+</div>
+<br><br><br><br><br><br><br><br><br>
+
+
+<div class="container">
+<center><div id="eunizzle"><a rel="external" href ="https://classmatch.firebaseapp.com/inputclass.html#loaded">Input Your Class</a></div>
+<div id="eunizzle">
+<a rel="external" href ="https://classmatch.firebaseapp.com/findclass.html#loaded">Find Your Class</a></div></center>
+
+
+</div>
+</div>
 </body> 
 </html>
